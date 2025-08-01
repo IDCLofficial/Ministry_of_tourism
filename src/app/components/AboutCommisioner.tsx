@@ -12,12 +12,12 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-18 w-full px-4 md:px-[3rem]">
             {/* Left: Commissioner Image */}
             <div className="bg-white rounded-xl shadow-lg flex-shrink-0 w-full md:w-auto flex justify-center">
-                <div className="relative w-full h-[240px] md:w-[300px] md:h-[400px] lg:w-[500px] lg:h-[450px]">
+                <div className="relative w-full h-[240px] md:w-[300px] md:h-[350px] lg:w-[500px] lg:h-[450px]">
                     <Image
                     src={imgSrc}
                     alt="Commissioner"
                     fill
-                    className="object-cover object-center rounded-xl"
+                    className="object-fit object-center rounded-xl"
                     sizes="(max-width: 768px) 220px, 320px"
                     />
                 </div>
