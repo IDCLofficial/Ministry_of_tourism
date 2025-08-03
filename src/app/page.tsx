@@ -20,8 +20,8 @@ export default function Home() {
       <AboutSection 
         title="About Us"
         subtitle="To establish Imo State as a premier tourism destination in Nigeria, renowned for its rich cultural heritage, dynamic creative sector, and world-class hospitality, thereby attracting both local and international visitors while enhancing the state’s global image."
-        image1="/images/image2.png"
-        image2="/images/image (6).png"
+        image1="/images/arts_training.jpg"
+        image2="/images/culture.jpg"
       />
       <AboutCommisioner 
         imgSrc="/images/commissioner.png" 
@@ -29,7 +29,7 @@ export default function Home() {
       />
       <section className="w-full flex flex-col gap-4">
         <FeaturedInitiatives />
-        <TourismSites />
+        {/* <TourismSites /> */}
         <QuickLinks />
         {/* <Advertisement /> */}
       </section>

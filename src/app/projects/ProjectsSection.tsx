@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { projects } from "./projects";
 
 
-const PROJECTS_PER_PAGE = 2;
+const PROJECTS_PER_PAGE = 5;
 
 export default function ProjectsSection() {
     const [page, setPage] = useState(0);
@@ -23,7 +23,7 @@ export default function ProjectsSection() {
     }
 
     return (
-        <section className="w-full py-10 md:py-16 bg-white flex flex-col items-center gap-8 md:gap-22 px-4 md:px-8">
+        <section className="w-full py-10 md:py-16 bg-white flex flex-col items-center gap-8 md:gap-22 px-4 md:px-8 divide-y-2 divide-gray-200">
             {currentProjects.map((project) => (
                 <ProjectCard key={project.title} {...project} />
             ))}

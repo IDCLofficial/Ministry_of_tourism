@@ -2,22 +2,22 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    imgSrc: "/images/tech-dev.png",
+    imgSrc: "/images/tourism_site.jpg",
     title: "Tourism Development",
     description: "Promotes tourist sites like Oguta Lake, Njaba River, Mbari Cultural Center, and Owerri Amusement Park.\n\nCollaborates with private investors to develop hospitality infrastructure (hotels, resorts, and eco-tourism projects)."
   },
   {
-    imgSrc: "/images/e-gov.png",
+    imgSrc: "/images/culture.jpg",
     title: "Cultural Preservation",
     description: "Documents and promotes Igbo traditions, festivals, dances, and artifacts.\n\nSupports local festivals like Iri Ji (New Yam Festival) and Imo Carnival."
   },
   {
-    imgSrc: "/images/cyber-security.png",
+    imgSrc: "/images/creative_arts.webp",
     title: "Creative Arts & Entertainment",
     description: "Encourages Nollywood, music, visual arts, and crafts from Imo State.\n\nProvides platforms for artists through exhibitions, workshops, and grants."
   },
   {
-    imgSrc: "/images/training.png",
+    imgSrc: "/images/arts_training.jpg",
     title: "Economic Growth & Job Creation",
     description: "Aims to make tourism a major revenue source for Imo State.\n\nEmpowers youths through creative industry training programs."
   },

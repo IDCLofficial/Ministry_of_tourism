@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import {motion} from "framer-motion"
 
 const links = [
   {
@@ -30,7 +33,12 @@ const links = [
 
 export default function QuickLinks() {
   return (
-    <section className="w-full p-4 md:p-8 py-10 md:py-16">
+    <motion.section 
+      initial={{y:40}}
+      whileInView = {{y:0}}
+      transition={{duration:1, ease:"backIn"}}
+      className="w-full p-4 md:p-8 py-10 md:py-16"
+    >
       <h2 className="text-dark-primary text-2xl md:text-3xl lg:text-[43px] font-medium text-center mb-8 md:mb-12">Quick Links</h2>
       <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-6 px-0 md:px-4">
         {links.map((link) => (
@@ -38,7 +46,7 @@ export default function QuickLinks() {
             {/* <div className="relative w-full h-[140px] md:h-[200px] z-0">
               <Image src={link.img} alt={link.title} fill className="object-cover" />
             </div> */}
-            <Link href={link.href} className="flex-1 flex flex-col justify-between relative p-4 md:p-6 bg-white -mt-[30px] md:-mt-[30px] 
+            <Link href={link.href} className="flex-1 flex flex-col justify-between relative p-4 md:p-6 bg-white md:-mt-[30px] 
             w-[90%] h-[120px] md:h-[180px] mx-auto shadow-md border border-gray-200 hover:scale-105 transition-all duration-300">
               <div>
                 <h3 className={`text-dark-secondary text-base md:text-lg font-bold mb-2`}>{link.title}</h3>
@@ -53,6 +61,6 @@ export default function QuickLinks() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 } 

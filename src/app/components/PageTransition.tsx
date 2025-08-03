@@ -21,7 +21,6 @@ export default function PageTransition({ children, type = "fade", ...rest }: Pag
         whileInView={animate}
         transition={transition}
         viewport={viewport}
-        className="break-words"
         {...rest}
       >
         {children}
