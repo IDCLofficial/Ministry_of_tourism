@@ -11,7 +11,7 @@ export const teamMembers = [
     },
     {
         name: "TUC Nwokonkwo",
-        position: "permSec",
+        position: "Permanent Secretary",
         imgSrc: "/images/permSec.jpeg"
     }
 ]
