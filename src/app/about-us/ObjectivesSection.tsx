@@ -1,27 +1,23 @@
 export const ObjectivesSection = () => {
     const objectives = [
         {
-            title:"Make Imo a top tourist destination",
+            title:"To make Imo a top tourism destination",
             description:""
         },
         {
-            title:"Attract more visitors",
+            title:"To attract more visitors",
             description:""
         },
         {
-            title:"Improve tourism facilities",
+            title:"To improve tourism facilities",
             description:""
         },
         {
-            title:"Partner with investors",
+            title:"To partner with investors",
             description:""
         },
         {
-            title:"Enhance digital marketing",
-            description:""
-        },
-        {
-            title:"Develop human capacity",
+            title:"To develop human capacity in the state",
             description:""
         }
     ];
