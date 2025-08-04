@@ -1,24 +1,28 @@
 export const ObjectivesSection = () => {
-    const agencies = [
+    const objectives = [
         {
-            title: "Imo State Tourism Board",
-            description: "Responsible for developing, promoting, and regulating tourism activities in Imo State. The Board works to harness the state's tourism potential, attract investment, and boost economic development through tourism initiatives and policy implementation."
+            title:"Make Imo a top tourist destination",
+            description:""
         },
         {
-            title: "Nekede Zoological Garden",
-            description: "A conservation and recreational center dedicated to the preservation of wildlife, environmental education, and public awareness. The garden provides opportunities for research, tourism, and leisure, while supporting biodiversity and wildlife conservation in Imo State."
+            title:"Attract more visitors",
+            description:""
         },
         {
-            title: "Mbari Cultural & Arts Centre",
-            description: "A cultural institution that preserves, promotes, and showcases Igbo art, culture, and heritage. The Centre serves as a venue for exhibitions, performances, and festivals, fostering cultural education and supporting local artists and artisans."
+            title:"Improve tourism facilities",
+            description:""
         },
         {
-            title: "Imo State Tourism Information Office",
-            description: "Provides information and guidance to tourists and visitors about attractions, events, and services in Imo State. The office supports tourism development by facilitating access to resources and promoting the state's tourism assets."
+            title:"Partner with investors",
+            description:""
         },
         {
-            title: "Imo State Investment Promotion Agency (ISIPA)",
-            description: "The agency is tasked with attracting, facilitating, and supporting investments in Imo State. ISIPA provides information, incentives, and support services to investors, promotes investment opportunities, and works to improve the state's business environment."
+            title:"Enhance digital marketing",
+            description:""
+        },
+        {
+            title:"Develop human capacity",
+            description:""
         }
     ];
 
@@ -38,13 +42,13 @@ export const ObjectivesSection = () => {
                         Our Strategic Objectives
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-                        {agencies.map((agency, index) => (
+                        {objectives.map((objective, index) => (
                             <div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-gray-200 text-center w-full">
                                 <h3 className="font-medium text-xl md:text-[22px] mb-2 md:mb-3">
-                                    {agency.title}
+                                    {objective.title}
                                 </h3>
                                 <p className="text-dark-primary-body text-base md:text-[1rem]">
-                                    {agency.description}
+                                    {objective?.description}
                                 </p>
                             </div>
                         ))}
