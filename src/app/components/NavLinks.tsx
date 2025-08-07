@@ -25,7 +25,7 @@ const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
     const pathname = usePathname();
     return (
         <nav>
-            <ul className={mobile ? "flex flex-col gap-6 mt-8" : "flex items-center gap-10 list-none p-0 m-0"}>
+            <ul className={mobile ? "flex flex-col gap-6 mt-8" : "flex items-center gap-8 list-none p-0 m-0"}>
                 {navLinks.map((link) => (
                     <li key={link.label}>
                         <Link
