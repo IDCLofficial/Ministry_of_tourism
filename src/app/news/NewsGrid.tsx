@@ -14,7 +14,7 @@ export default function NewsGrid() {
           <p className="text-gray-600 mb-6">Check out our services for more information.</p>
           <a 
             href="/services" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition duration-300"
+            className="inline-block bg-primary-green hover:bg-primary-green/80 text-white font-medium py-2 px-6 rounded transition duration-300"
           >
             View Our Services
           </a>
