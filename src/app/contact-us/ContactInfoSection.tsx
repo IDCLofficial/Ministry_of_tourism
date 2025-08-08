@@ -6,10 +6,7 @@ const contactInfo = {
   email: "imotcac@yahoo.com",
   phone: "0803 092 5349",
   socials: [
-    { icon: <FaFacebookF />, href: "https://www.facebook.com/Imotcac/" },
-    { icon: <FaTwitter />, href: "#" },
-    { icon: <FaInstagram />, href: "#" },
-    { icon: <FaLinkedinIn />, href: "#" },
+    { icon: <FaFacebookF />, href: "https://www.facebook.com/profile.php?id=61569502735232" },
   ],
 };
 

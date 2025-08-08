@@ -17,8 +17,8 @@ const info = {
             href: "/news"
         },
         {
-            label: "Units",     
-            href: "/units"
+            label: "Departments",     
+            href: "/departments"
         },
         {
             label: "Events",
@@ -45,7 +45,7 @@ const info = {
     ],
     contact: [
         {
-            label: "+0803 092 5349",
+            label: "0803 092 5349",
             href: "/"
         },
         {

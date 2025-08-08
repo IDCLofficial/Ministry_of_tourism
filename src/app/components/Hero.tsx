@@ -17,7 +17,7 @@ interface HeroImages {
 
 const heroImages: HeroImages[] = [
     {
-        bgImage: "/images/heroImage.png"
+        bgImage: "/images/heroImage.jpg"
     },
     {
         bgImage: "/images/heroImage2.jpg"
@@ -45,7 +45,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
                 key={bgImage}
                 src={bgImage}
                 alt="hero"
-                className="absolute inset-0 w-full h-full object-cover z-0"
+                className="absolute inset-0 w-full h-full object-cover object-[50%_50%] z-0"
                 initial={{ scale: .997}}
                 animate={{ scale: 1}}
                 transition={{ duration: 2, ease: "easeOut" }}
