@@ -54,3 +54,7 @@
 .animate-zoom-in {
   animation: zoomIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+*{
+  transition: 0.1s all ease-in-out
+}
