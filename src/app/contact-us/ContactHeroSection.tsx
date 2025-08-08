@@ -13,7 +13,7 @@ const ContactHeroSection: React.FC<ContactHeroSectionProps> = ({ title }) => (
     <div className="relative z-10 flex flex-col gap-2 items-center justify-center w-full h-full">
       <Title label="Contact Us" />
       <motion.h1
-        className="text-white text-4xl md:text-5xl font-bold z-10"
+        className="text-white text-2xl md:text-4xl font-bold z-10"
         initial={{ opacity: 1 }}
         animate={{}}
       >

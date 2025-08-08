@@ -17,8 +17,8 @@ export default function ProjectCard({ title, description, image, sponsors }: Pro
         <Image src={image} alt={title} width={500} height={500} className="object-cover w-full h-[180px] md:h-[400px]" />
       </div>
       <div className="md:w-[60%] md:flex-1 flex flex-col gap-4 md:gap-6">
-        <h2 className="text-xl md:text-3xl lg:text-[43px] font-medium">{title}</h2>
-        <p className="text-dark-primary-body text-base md:text-[1rem] leading-relaxed">
+        <h2 className="text-2xl font-medium">{title}</h2>
+        <p className="text-dark-primary-body text-base leading-relaxed">
           {description}
         </p>
         {/* <AppLink href="/projects/skillup" variant="primary" label="Meet Our Talents" className="w-max md:w-max" /> */}

@@ -12,7 +12,7 @@ export default function FeaturedInitiatives() {
         initial={{opacity: 0, y:80}}
         whileInView = {{opacity: 1, y:0}}
         transition={{duration:1, ease:"easeInOut"}}
-        className="text-dark-primary text-2xl md:text-3xl lg:text-[43px] font-medium text-center md:mb-12"
+        className="text-dark-primary text-2xl md:text-3xl font-medium text-center md:mb-12"
       >
         Featured Initiatives
       </motion.h2>

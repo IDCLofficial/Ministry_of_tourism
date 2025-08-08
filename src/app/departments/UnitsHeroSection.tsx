@@ -9,7 +9,7 @@ export default function UnitsHeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
         <Title label="Departments" />
         <motion.h1
-          className="text-white text-3xl md:text-5xl font-bold text-center leading-tight py-2"
+          className="text-white text-2xl md:text-4xl font-bold text-center leading-tight py-2"
           initial={{ opacity: 1 }}
           animate={{}}
         >

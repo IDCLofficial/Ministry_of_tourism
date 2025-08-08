@@ -46,16 +46,13 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
                 src={bgImage}
                 alt="hero"
                 className="absolute inset-0 w-full h-full object-cover object-[50%_50%] z-0"
-                initial={{ scale: .997}}
-                animate={{ scale: 1}}
-                transition={{ duration: 2, ease: "easeOut" }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-0"></div>
             <div className="relative z-10 py-10">
-                <div className="w-full md:w-[60%] flex flex-col gap-8">
+                <div className="w-full md:w-[70%] flex flex-col gap-8">
                     <PageTransition type="fadeUp">
                         <Title label={title}/>
-                        <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight py-4">{caption}</h1>
+                        <h1 className="text-[2rem] font-bold text-white leading-tight py-4">{caption}</h1>
                         <p className="text-[1rem] leading-[1.5] text-white">
                             {subtitle}
                         </p>

@@ -20,7 +20,7 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) 
       <div className="relative z-10 w-full flex flex-col gap-2 items-center justify-end gap-0 h-full px-4 text-center">
         <Title label="Gallery" />
         <motion.h1
-          className="text-white text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg"
+          className="text-white text-2xl md:text-4xl font-bold mb-4 drop-shadow-lg"
           initial={{ opacity: 1 }}
           animate={{}}
         >

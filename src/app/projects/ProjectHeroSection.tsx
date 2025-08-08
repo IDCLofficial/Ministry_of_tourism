@@ -10,7 +10,7 @@ export default function ProjectHeroSection() {
       <div className="relative z-10 flex flex-col gap-2 items-center justify-center w-full h-full">
         <Title label="Projects" />
         <motion.h1
-          className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4"
+          className="text-white text-2xl md:text-4xl font-bold text-center px-4"
           initial={{ opacity: 1 }}
           animate={{}}
         >

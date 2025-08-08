@@ -30,7 +30,7 @@ const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
                     <li key={link.label}>
                         <Link
                             href={link.href}
-                            className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : mobile ? "text-white font-semibold" : "text-white font-semibold"}`}
+                            className={`hover:text-tertiary-green text-[14px] transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : mobile ? "text-white font-semibold" : "text-white font-semibold"}`}
                             onClick={onClickLink}
                         >
                             {link.label}

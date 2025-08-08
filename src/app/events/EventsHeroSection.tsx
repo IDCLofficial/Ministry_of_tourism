@@ -9,7 +9,7 @@ export default function EventsHeroSection() {
       <div className="flex flex-col gap-2 items-center justify-center">
         <Title label="Events" />
         <motion.h1
-          className="text-white text-4xl md:text-5xl font-bold text-center"
+          className="text-white text-2xl md:text-4xl font-bold text-center"
           initial={{ opacity: 1 }}
           animate={{}}
         >

@@ -12,9 +12,9 @@ export default function ServicesHeroSection() {
                 <Title label="Services" />
             </div>
             <div className="relative z-10 flex justify-center">
-                <div className="w-full md:w-[60%] flex flex-col items-center text-center">
+                <div className="w-full md:w-[70%] flex flex-col items-center text-center">
                     <motion.h1
-                        className="text-2xl md:text-[3rem] font-bold text-white leading-tight"
+                        className="text-2xl md:text-4xl font-bold text-white leading-tight"
                         initial={{ opacity: 1 }}
                         animate={{}}
                     >

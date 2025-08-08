@@ -13,7 +13,7 @@ export const AboutSection = ({ aboutText, imgSrc, altText }: AboutSectionProps) 
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-0">
                     {/* Left Section - Text Content */}
                     <div className="w-full lg:w-[50%] p-0 md:p-10 rounded-xl">
-                        <h2 className="text-2xl md:text-[43px] font-medium text-black mb-4 md:mb-8">
+                        <h2 className="text-3xl font-medium text-black mb-4 md:mb-8">
                             About the Ministry
                         </h2>
                         <p className="text-dark-primary-body text-base md:text-[1rem] leading-7 md:leading-8">

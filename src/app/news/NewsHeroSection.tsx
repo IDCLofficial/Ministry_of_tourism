@@ -35,7 +35,7 @@ export default function NewsHeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
       <div className="relative z-10 flex flex-col items-center justify-center gap-2 w-full h-full px-4 md:px-0">
-        <h1 className="text-white text-3xl md:text-[3rem] md:text-5xl font-bold text-center leading-tight">
+        <h1 className="text-white text-2xl md:text-4xl font-bold text-center leading-tight">
           Latest News & Updates
         </h1>
         <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">
