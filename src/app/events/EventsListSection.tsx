@@ -35,7 +35,7 @@ export default function EventsListSection() {
           {upcomingEvents.map((event, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center border-b border-b-[#C8C8C8] pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
-                <Image src={event.img} alt={event.title} fill className="object-cover" />
+                <Image src={event.img} alt={event.title} width={1280} height={720} className="object-cover w-full h-full object-[50%_30%]" />
               </div>
               <div className="flex-1 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                 <div className="flex-1">

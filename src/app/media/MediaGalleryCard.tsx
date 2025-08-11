@@ -10,15 +10,15 @@ interface MediaGalleryCardProps {
 const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVideo }) => {
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md">
-      <div className="relative w-full h-48">
-        <Image src={image} alt={title} fill className="object-cover" />
+      <div className="relative w-full h-60">
+        <Image src={image} alt={title} width={1280} height={720} className="object-cover h-full w-full object-[50%_0]" />
         {isVideo && (
-          <span className="absolute inset-0 flex items-center justify-center">
+          <a href="https://youtube.com/watch?v=3MIEEmmHkAA&si=Z0cw9CfMX55xYamV" className="absolute inset-0 flex items-center justify-center">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="24" fill="red" />
               <polygon points="20,16 34,24 20,32" fill="#fff" />
             </svg>
-          </span>
+          </a>
         )}
       </div>
       <div className="p-4 flex-1 flex flex-col">

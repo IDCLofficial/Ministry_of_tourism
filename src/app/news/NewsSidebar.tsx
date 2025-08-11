@@ -1,18 +1,21 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
 import newsList from "./newsList";
 
-const categories = [
-  { name: "Latest Updates", count: 0 },
-  { name: "Policies", count: 0 },
-  { name: "Latest Updates", count: 0},
-  { name: "Latest Updates", count: 0},
-];
+const categories = Array.from(
+  newsList.reduce((map, news) => {
+    map.set(news.badge, (map.get(news.badge) || 0) + 1);
+    return map;
+  }, new Map<string, number>())
+).map(([name, count]) => ({ name, count }));
 
 const popularNews = newsList.slice(0, 3).map(({ title, date, img }) => ({ title, date, img }));
+import { useNewsContext } from "./NewsContext";
 
 export default function NewsSidebar() {
+  const { selectedCategory, setSelectedCategory } = useNewsContext();
   return (
     <aside className="w-full md:w-64 flex-shrink-0 bg-[#F9F9F9] p-2 md:p-4 mb-8 md:mb-0">
       <div className="md:hidden">
@@ -22,22 +25,31 @@ export default function NewsSidebar() {
         </div>
         <div className="flex flex-col gap-2 mt-4" id="dropdown">
           {categories.map((cat, idx) => (
-            <div key={idx} className="w-full flex gap-2 md:gap-3 items-center">
-              <span>{cat.name}</span>
-              {/* <span>{cat.count}</span> */}
-            </div>
-          ))}
+  <button
+    key={idx}
+    className={`w-full flex gap-2 md:gap-3 items-center px-2 py-1 rounded ${selectedCategory === cat.name ? 'bg-green-100 text-green-700 font-semibold' : ''}`}
+    onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
+    type="button"
+  >
+    <span>{cat.name}</span>
+    {/* <span>{cat.count}</span> */}
+  </button>
+))}
         </div>
       </div>
       <div className="mb-6 md:mb-8 max-md:hidden">
         <h3 className="font-medium text-base md:text-[18px] mb-2 md:mb-4">CATEGORIES</h3>
         <ul className="space-y-1 md:space-y-2">
           {categories.map((cat, idx) => (
-            <li key={idx} className="flex justify-between text-gray-700 text-xs md:text-[15px]">
-              <span>{cat.name}</span>
-              <span>{cat.count}</span>
-            </li>
-          ))}
+  <li
+    key={idx}
+    className={`flex justify-between text-gray-700 text-xs md:text-[15px] px-2 py-1 rounded cursor-pointer ${selectedCategory === cat.name ? 'bg-green-100 text-green-700 font-semibold' : ''}`}
+    onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
+  >
+    <span>{cat.name}</span>
+    <span>{cat.count}</span>
+  </li>
+))}
         </ul>
       </div>
       <div className="max-md:hidden">

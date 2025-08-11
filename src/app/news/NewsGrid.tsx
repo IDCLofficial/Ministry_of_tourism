@@ -1,11 +1,18 @@
+"use client";
 import NewsCard from "./NewsCard";
 import newsList from "./newsList";
 
+import { useNewsContext } from "./NewsContext";
+
 export default function NewsGrid() {
+  const { selectedCategory } = useNewsContext();
+  const filteredNews = selectedCategory
+    ? newsList.filter(item => item.badge === selectedCategory)
+    : newsList;
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-      {newsList.length > 0 ? (
-        newsList.map((item, idx) => (
+      {filteredNews.length > 0 ? (
+        filteredNews.map((item, idx) => (
           <NewsCard news={item} key={idx} />
         ))
       ) : (

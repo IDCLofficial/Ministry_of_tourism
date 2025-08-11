@@ -57,7 +57,7 @@ export default function PastEvents() {
                     ) : pastEvents.map((event) => (
                         <div key={event.slug} className="flex-shrink-0 w-80 bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col p-4">
                             <div className="relative w-full h-40 mb-4 rounded overflow-hidden">
-                                <Image src={event.img} alt={event.title} fill className="object-cover rounded" />
+                                <Image src={event.img} alt={event.title} width={500} height={500}  className="object-cover h-full w-full object-[50%_10%] rounded" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-xs text-gray-500 mb-1">{event.date} | {event.location}</span>

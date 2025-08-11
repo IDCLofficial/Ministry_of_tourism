@@ -3,6 +3,7 @@ import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import newsList from "./newsList";
 import Link from "next/link";
+import { SubsequentHero } from "../components/Hero";
 
 export default function NewsHeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,9 +32,7 @@ export default function NewsHeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[350px] md:h-[400px] flex items-center justify-center bg-[url('/images/projectsHero.png')] bg-cover bg-center">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0"></div>
+    <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
       <div className="relative z-10 flex flex-col items-center justify-center gap-2 w-full h-full px-4 md:px-0">
         <h1 className="text-white text-2xl md:text-4xl font-bold text-center leading-tight">
           Latest News & Updates
@@ -58,6 +57,6 @@ export default function NewsHeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </SubsequentHero>
   );
 } 

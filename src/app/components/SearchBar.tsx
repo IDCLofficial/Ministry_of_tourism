@@ -1,3 +1,5 @@
+"use client"
+
 import { LuSearch } from "react-icons/lu";
 
 interface SearchBarProps {

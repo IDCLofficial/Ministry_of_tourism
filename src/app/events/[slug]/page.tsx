@@ -113,7 +113,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
             alt={event.title}
             width={1920}
             height={600}
-            className="object-cover w-full h-[180px] md:h-[480px] rounded-none"
+            className="object-cover w-full h-full rounded-none"
             priority
           />
           <div className="static md:absolute md:bottom-6 md:right-10 z-10 mt-4 md:mt-0 flex justify-center w-full">
@@ -142,7 +142,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
           {(event.speakers && (event.speakers as Speaker[]).length > 0) ? (event.speakers as Speaker[]).map((sp, idx) => (
             <div key={idx} className="flex flex-col items-start bg-white rounded-xl shadow border border-gray-200 p-3 md:p-4">
               <div className="w-full h-40 md:w-full md:h-48 relative mb-2 md:mb-3 rounded-lg overflow-hidden">
-                <Image src={sp.img} alt={sp.name} fill className="object-cover" />
+                <Image src={sp.img} alt={sp.name} width={1280} height={720} className="object-cover" />
               </div>
               <span className="text-green-700 font-semibold text-xs md:text-sm mb-1">{sp.role}</span>
               <span className="font-bold text-base md:text-lg text-left">{sp.name}</span>
