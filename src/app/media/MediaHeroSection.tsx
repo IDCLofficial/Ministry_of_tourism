@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react";
+import SearchBar from "../components/SearchBar";
 import { SubsequentHero } from "../components/Hero";
 import { motion } from "framer-motion";
 import { Title } from "../components/Title";
@@ -16,10 +17,12 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) 
     <SubsequentHero
       className={`bg-[url('/images/gradient.png')] bg-cover bg-center`}
     >
-      <div className="relative z-10 w-full flex flex-col gap-2 items-center justify-center gap-0 h-full px-4 text-center">
+      <div className="relative z-10 flex justify-center">
         <Title label="Gallery" />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center gap-2">
         <motion.h1
-          className="text-white text-2xl md:text-4xl font-bold mb-4 drop-shadow-lg"
+          className="text-white text-3xl md:4xl lg:text-5xl font-bold drop-shadow-lg"
           initial={{ opacity: 1 }}
           animate={{}}
         >

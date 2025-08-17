@@ -1,27 +1,62 @@
-export const projects = [
-  {
-    title: "Nworie River Redevelopment",
-    image: "/images/nworie_river.jpeg",
-    description: "Nworie River is a tributary of the Otamiri River in Imo State, Nigeria, running about 9.2 km in length. It is subject to intensive human and industrial activities and is used as a source of drinking water by the poor when the public water system fails. The river is polluted by organic wastes and has been reported above acceptable levels of chemical pollution. Redevelopment efforts are aimed at addressing pollution, flood control, and improving the river's ecological and economic value for Owerri and surrounding communities."
-  },
-  {
-    title: "Oguta “Wonderlake” Resort & Conference Centre.",
-    image: "/images/oguta_lake.jpeg",
-    description: "The Oguta Wonderlake Resort & Conference Centre is a major tourism project in Imo State, planned to feature world-class facilities such as an international golf course, five-star hotel, leisure parks, standard football pitch, shopping complexes, casinos, and cinemas. The project is expected to generate over 1,500 jobs and boost the local economy. Oguta Lake itself is the largest natural lake in southeastern Nigeria, important for tourism, fishing, and cultural heritage."
-  },    
-  {
-    title: "Abadaba Lake Resort.",
-    image: "/images/abadaba_lake.webp",
-    description: "Abadaba Lake, located in Ihitte-Uboma, Imo State, is recognized as a natural lake with potential for tourism development. There have been plans to develop the lake into a resort to attract visitors and promote local economic growth, but detailed information on the current status or features of the resort project is limited."
-  },
-  {
-    title: "Enhancements at the Sam Mbakwe International Cargo Airport.)",
-    image: "/images/sam_mbakwe.png",
-    description: "Sam Mbakwe International Cargo Airport in Owerri is notable for being the first state-owned airport in Nigeria, built through contributions from citizens of Imo and the wider Igbo community. It serves several cities in the region and was completed in 1994. While there have been mentions of ongoing or planned enhancements, specific details about recent or current enhancement projects are not widely documented."
-  },
-  {
-      title: "Renovatation of tourism assets such as Nekede Zoo & Gardens, Mbari Cultural Centre, springs and shrines.",
-      image: "/images/zoo.jpg",
-      description: "no information."
-  }
-];
+import { contentfulService } from "../../../lib/contentful";
+
+// export const projects:project[] = [
+  // {
+  //   title: "Imo Resilience Empowerment Program (IREP)",
+  //   image: "/images/irep.jpeg",
+  //   ongoing: true,
+  //   location: "Ohaji/Egbema, Okigwe, Owerri LGAs",
+  //   description: "Multi-sector support for 500+ vulnerable households—stipends, kits, and psychosocial aid.",
+  //   cta: "View Full Details",
+  //   partners: [
+  //     {
+  //       partner:"World Bank",
+  //       logo: "wb.png"
+  //     }, 
+  //     {
+  //       partner:"Federal Ministry of Humanitarian Affairs",
+  //       logo:"humanitarianAffairs.jpg"
+  //     }
+  //   ]
+
+  // },
+//   {
+//     title: "Shelter for All Emergency Housing Scheme",
+//     image: "/images/rehab (2).png",
+//     ongoing: false,
+//     location: "Aboh Mbaise, Orlu, Mbaitoli",
+//     description: "150 shelters and 3 kitchens built for disaster-hit families with health and GBV support.",
+//     cta: "Download Report (PDF)"
+//   },
+//   {
+//     title: "Imo Youth Empowerment for Resilience (IYER)",
+//     image: "/images/youth_empowerment.png",
+//     ongoing: true,
+//     location: "Owerri Zone",
+//     description: "Vocational training for 300 youths in ICT, tailoring, solar, catering, plus toolkits and stipends.",
+//     cta: "Join the Program",
+//     partners: [
+//       {
+//         partner:"UNICEF",
+//         logo: "unicef.png"
+//       }, 
+//       {
+//         partner:"NSIP",
+//         logo:"nsip.jpg"
+//       }
+//     ]
+//   },
+//   {
+//     title: "Rapid Response Food Security Relief",
+//     image: "/images/rapid_relief.jpg",
+//     ongoing: false,
+//     location: "Oguta, Isiala Mbano",
+//     description: "Food, water, hygiene kits, and medicine delivered to 15,000 flood victims within 2 weeks.",
+//     cta: "Download Relief Report (PDF)"
+//   }
+// ];
+
+export async function getProject(){
+  const projects = await contentfulService.getProjectsByMinistryId(process.env.NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID!);
+  return projects
+}

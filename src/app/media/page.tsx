@@ -3,9 +3,11 @@ import MediaHeroSection from "./MediaHeroSection";
 import MediaGalleryGrid from "./MediaGalleryGrid";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
-import { mediaItems } from "./media";
+import getMedia from "./media";
+import { Media } from "../../../lib/types";
 
-export default function MediaPage() {
+export default async function MediaPage() {
+  const media = await getMedia();
   return (
     <main className="min-h-screen w-full bg-[#F7F9FA] flex flex-col">
       <MediaHeroSection
@@ -14,12 +16,12 @@ export default function MediaPage() {
         backgroundImage="/images/heroImage.png"
       />
       <section className="w-full max-w-7xl mx-auto py-12 px-4">
-        <MediaGalleryGrid items={mediaItems} />
+        <MediaGalleryGrid items={media as unknown as Media[]} />
       </section>
       <CTASection 
-        heading="Together we can Promote Tourism and Culture in Imo State" 
-        subtext="Want to get involved or partner with us? Reach out today" 
-        buttonLabel="Contact Us" 
+        heading="Partner with Us Today!"
+        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
+        buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />
       <Footer />

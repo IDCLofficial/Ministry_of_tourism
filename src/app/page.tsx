@@ -7,9 +7,15 @@ import LatestNews from "@/app/components/LatestNews";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import FeaturedInitiatives from "./components/FeaturedInitiatives";
-import TourismSites from "./components/TourismSites";
+import { getProject } from "./projects/projects";
+import { Project } from "../../lib/types";
+import { contentfulService } from "../../lib/contentful";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProject()
+  const ministries = await contentfulService.getMinistries()
+  console.log(ministries)
+  
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
@@ -28,7 +34,7 @@ export default function Home() {
         title="About The Commissioner" 
       />
       <section className="w-full flex flex-col gap-4">
-        <FeaturedInitiatives />
+        <FeaturedInitiatives projects = {projects as unknown as Project[]}/>
         {/* <TourismSites /> */}
         <QuickLinks />
         {/* <Advertisement /> */}
