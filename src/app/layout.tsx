@@ -1,11 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/app/components/Navbar";
-import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
-import Sidebar from "@/app/components/Sidebar";
-import { useState } from "react";
+import ClientShell from "./ClientShell";
+import { buildRootMetadata, jsonLd, organizationJsonLd } from "@/lib/seo";
 
 const satoshiFont = localFont({
   src: [
@@ -32,22 +29,22 @@ const satoshiFont = localFont({
   ],
 });
 
+export const metadata: Metadata = buildRootMetadata({
+  title: "Ministry of Tourism",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <html lang="en">
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
-        <Navbar onOpenSidebar={() => setSidebarOpen(true)} />
-        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <PageTransitionWrapper>
-          {children}
-        </PageTransitionWrapper>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organizationJsonLd) }} />
+        <ClientShell>{children}</ClientShell>
       </body>
     </html>
   );

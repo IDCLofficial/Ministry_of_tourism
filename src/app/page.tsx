@@ -10,6 +10,14 @@ import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import { getProject } from "./projects/projects";
 import { Project } from "../../lib/types";
 import { contentfulService } from "../../lib/contentful";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Tourism | Imo State Government" },
+  description: "Official website of the Ministry of Tourism, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default async function Home() {
   const projects = await getProject()
