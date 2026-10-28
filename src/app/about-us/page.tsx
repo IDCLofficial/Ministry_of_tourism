@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Us",
-  description: "About the Ministry of Tourism of the Imo State Government: who we are and what we do.",
+  description: "Mission, vision and departments of the Imo State ministry promoting tourism, preserving cultural heritage and developing the creative arts.",
   path: "/about-us",
 });
 

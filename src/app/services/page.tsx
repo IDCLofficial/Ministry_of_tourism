@@ -5,8 +5,8 @@ import ServicesSection from "./ServicesSection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Services",
-  description: "Services offered by the Ministry of Tourism of the Imo State Government.",
+  title: "Tourism, Culture and Creative Arts Services",
+  description: "Oguta Lake, Njaba River, Mbari Cultural Center and Owerri Amusement Park, plus cultural festivals and creative arts support in Imo State.",
   path: "/services",
 });
 

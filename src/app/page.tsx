@@ -13,8 +13,8 @@ import { contentfulService } from "../../lib/contentful";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Tourism | Imo State Government" },
-  description: "Official website of the Ministry of Tourism, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Tourism, Hospitality and Culture" },
+  description: "Discover Imo State: Oguta Lake, Njaba River, Mbari Cultural Center, the Iri Ji festival and Imo Carnival, from the Imo State tourism ministry.",
   path: "/",
 });
 
